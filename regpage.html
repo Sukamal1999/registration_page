@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+
+    <link rel="stylesheet"
+    href="style.css" type="text/css";
+</head>
+<body>
+    <div class="main">
+    <div class="register">
+
+        <form onsubmit ="saveToLocalStorage(event)">
+        <h2>Register</h2>
+        
+        <label>First Name : </label>
+        <br>
+        <input type="text" name="fname" ,
+        id="fname" placeholder="Enter Your First Name">
+        <br><br>
+        <label>Last Name : </label>
+        <br>
+        <input type="text" name="lname" 
+        id="lname" placeholder="Enter Your last Name">
+        <br><br>
+        <label>Email : </label>
+        <br>
+        <input type="text" name="email" 
+        id="email" placeholder="Enter Your Email">
+        <br><br>
+        <label>Time to Call :</label>
+        <br>
+        <input type="date" name="date" 
+        id="date" placeholder="Enter Your date">
+        <input type="time" name="time" 
+        id="time" placeholder="Enter yhe Time frame">
+        <br><br>
+        <input type="submit" value="Get a call" 
+         id="submit">
+
+        </form>
+       <script>
+        function saveToLocalStorage(event){
+            event.preventDefault();
+            const fname = event.target.fname.value;
+            const lname = event.target.lname.value;
+            const email = event.target.email.value;
+            const TOC = event.target.date.value;
+            const time = event.target.time.value;
+            localStorage.setItem('fname',name);
+            localStorage.setItem('lname',lname);
+            localStorage.setItem('email',email);
+            localStorage.setItem('TOC',TOC);
+            localStorage.setItem('time',time);
+
+        }
+   
+       </script>
+
+    </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+    
+</body>
+</html>
